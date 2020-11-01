@@ -6,4 +6,4 @@ before_install:
   - docker build -t apakina/docker-react3 -f Dockerfile.dev .
 
 script:
-  - docker run apakina/docker-react3 npm run test --coverage
+  - docker run apakina/docker-react3 npm run test -- --coverage
