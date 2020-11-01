@@ -7,3 +7,13 @@ before_install:
 
 #script:
 #  - docker run apakina/docker-react3 npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: apakina-react
+  env: ApakinaReact-env
+  bucket_name: "elasticbeanstalk-us-east-2-136935711337"
+  bucket_path: "apakina-react-builds"
+  on:
+    branch: master
